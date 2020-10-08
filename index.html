@@ -6,25 +6,58 @@
     <meta name="description" content="Muzaffar Collections"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="src/css/materialize.min.css">
+    <link rel="stylesheet" href="src/css/main.css">
   </head>
 
   <body>
-    <!-- Navigasi -->
-    <div class="navbar-fixed">
-      <nav class="grey darken-4">
-        <div class="nav-wrapper container">
-          <a href="#" class="brand-logo" id="logo-container">MC21</a>
-          <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+    <header>
+      <!-- Navigasi -->
+      <div class="navbar-fixed">
+        <nav class="grey darken-4">
+          <div class="nav-wrapper container">
+            <a href="#home" class="brand-logo" id="logo-container">MC21</a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
 
-          <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="topnav right hide-on-med-and-down"></ul>
+          </div>
+        </nav>
+      </div>
+      <!-- SideNav List -->
+      <ul class="sidenav" id="nav-mobile"></ul>
+      <!-- Akhir Navigasi -->
+    </header>
+
+    <main>
+      <div id="body-content"></div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="page-footer grey darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Muzaffar Creative 21</h5>
+            <p class="grey-text text-lighten-4">Jl. raya batujajar kec. Batujajar Bandung Barat Jawa Barat.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
         </div>
-      </nav>
-    </div>
-    <!-- SideNav List -->
-    <ul class="sidenav" id="nav-mobile"></ul>
-    <!-- Akhir Navigasi -->
-
-    <div id="body-content"></div>
+      </div>
+      <div class="footer-copyright grey darken-4">
+        <div class="container">
+        © 2020 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Akhir footer -->
 
     <script src="src/js/materialize.min.js"></script>
     <script src="src/js/main.js"></script>

@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Activate slide image
-  function initSlide() {
+  // Initialize Home Page
+  function initHomePage() {
     var slider = document.querySelectorAll('.slider');
     M.Slider.init(slider,{
       "indicators": false
     });
+
+    var paralax = document.querySelectorAll('.parallax');
+    M.Parallax.init(paralax);
   }
 
   // Activate sidebar nav
@@ -24,6 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         // Daftarkan event listener untuk setiap tautan menu
+        document.querySelector(".brand-logo").addEventListener("click", function(event) {
+          page = event.target.getAttribute("href").substr(1);
+          loadPage(page);
+        });
+
         document.querySelectorAll(".sidenav a, .topnav a").forEach(function(elm) {
           elm.addEventListener("click", function(event) {
             // Tutup sidenav
@@ -55,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
           content.innerHTML = xhttp.responseText;
           
           if (page == "home") {
-            initSlide();
+            initHomePage();
           }
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
