@@ -10,6 +10,24 @@ document.addEventListener("DOMContentLoaded", function() {
     M.Parallax.init(paralax);
   }
 
+  // Initialize about page
+  function initAboutPage() {
+    var paralax = document.querySelectorAll('.parallax');
+    M.Parallax.init(paralax);
+  }
+
+  // Initialize product page
+  function initProductPage() {
+    var paralax = document.querySelectorAll('.parallax');
+    M.Parallax.init(paralax);
+  }
+
+  // Initialize contact page
+  function initContactPage() {
+    var paralax = document.querySelectorAll('.parallax');
+    M.Parallax.init(paralax);
+  }
+
   // Activate sidebar nav
   var elems = document.querySelectorAll(".sidenav");
   M.Sidenav.init(elems);
@@ -20,11 +38,21 @@ document.addEventListener("DOMContentLoaded", function() {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4) {
         if (this.status != 200) return;
- 
+
         // Muat daftar tautan menu
         document.querySelectorAll(".topnav, .sidenav").forEach(function(elm) {
           elm.innerHTML = xhttp.responseText;
         });
+        var sideNav = document.querySelector(".sidenav");
+        sideNav.innerHTML = `<li><div class="user-view">
+          <div class="background">
+            <img src="src/images/icons/back-sidenav.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="src/images/icons/Logo-MC21.png"></a>
+          <a href="#name"><span class="black-text name">Muzaffar Creative 21</span></a>
+          <a href="#email"><span class="black-text email">jafar.pahrudin@gmail.com</span></a>
+        </div></li>
+        ${sideNav.innerHTML}`;
 
         // Daftarkan event listener untuk setiap tautan menu
         document.querySelector(".brand-logo").addEventListener("click", function(event) {
@@ -62,8 +90,19 @@ document.addEventListener("DOMContentLoaded", function() {
         if (this.status == 200) {
           content.innerHTML = xhttp.responseText;
           
-          if (page == "home") {
-            initHomePage();
+          switch(page){
+            case "home":
+              initHomePage();
+              break;
+            case "about":
+              initAboutPage();
+              break;
+            case "product":
+              initProductPage();
+              break;
+            case "contact":
+              initContactPage();
+              break;
           }
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
