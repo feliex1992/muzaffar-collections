@@ -4744,7 +4744,7 @@ small {
 
 .card {
   position: relative;
-  margin: 10px auto 10px auto;
+  margin: 20px auto 0px auto;
   background-color: #fff;
   -webkit-transition: -webkit-box-shadow .25s;
   transition: -webkit-box-shadow .25s;
