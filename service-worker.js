@@ -2,6 +2,7 @@ const CACHE_NAME = "mc21-v1.0.7";
 var urlsToCache = [
   "/",
   "/index.html",
+  "/manifest.json",
   "/src/nav.html",
   "/src/pages/home.html",
   "/src/pages/about.html",
